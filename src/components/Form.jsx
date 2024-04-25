@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { apiHello } from "../api/Api"
+import { Link } from 'react-router-dom';
 
 function Form() {
     const [formData, setFormData] = useState({name: ""});
@@ -44,6 +45,7 @@ function Form() {
                     <button type="submit">Envoyer</button>
                 </p>
                 <Msg msg={msg} />
+                <Link to="/time">Get server time</Link>
             </form>
         </>
     )
